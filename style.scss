@@ -1,0 +1,29 @@
+@mixin bordered($color) {
+  border: solid $color;
+  border-radius: 30px;
+  width: 150px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.success {
+  @include bordered(green);
+}
+
+.error {
+  @include bordered(red);
+}
+
+@mixin htmlS($back) {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 60px;
+  font-size: 30px;
+  background-color: $back;
+}
+html {
+  @include htmlS(rgb(218, 216, 216));
+}
+.container {
+  margin: 50px;
+}
